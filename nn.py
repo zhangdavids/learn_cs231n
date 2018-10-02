@@ -1,3 +1,5 @@
+#-*- coding:utf-8 -*-
+
 import numpy as np
 
 
@@ -5,11 +7,11 @@ class NearestNeighbor(object):
     def __init__(self):
         pass
 
-    def train(self, x, y):
-        self.Xtr = x
+    def train(self, X, y):
+        self.Xtr = X
         self.ytr = y
 
-    def predict(self, x):
+    def predict(self, X):
         num_test = X.shape[0]
         Ypred = np.zeros(num_test, dtype=self.ytr.dtype)
 
